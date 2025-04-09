@@ -3,11 +3,16 @@ from dotenv import load_dotenv
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-load_dotenv()  
+# Load environment variables
+load_dotenv()
 
+# Get the bot token from environment variables
 API_TOKEN = os.getenv('BOT_TOKEN')
-bot = telebot.TeleBot(API_TOKEN)
+if API_TOKEN is None:
+    raise ValueError("API_TOKEN is missing. Please set the BOT_TOKEN in your environment.")
 
+# Initialize the bot with the API token
+bot = telebot.TeleBot(API_TOKEN)
 
 # Create 250 coupons
 coupon_pool = [f'bibxatrizstudio-{str(i).zfill(3)}' for i in range(1, 251)]
