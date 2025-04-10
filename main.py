@@ -41,11 +41,14 @@ def generate_coupon(call):
         bot.send_message(call.message.chat.id, "Sorry, all coupons are taken.")
         return
 
-    # Instagram button
+    # Instagram buttons
     markup = InlineKeyboardMarkup()
-    markup.add(InlineKeyboardButton("💐 Visit our Instagram", url="https://www.instagram.com/bunnyinblooms/"))
+    markup.row(
+        InlineKeyboardButton("💐 Visit BunnyInBlooms Instagram", url="https://www.instagram.com/bunnyinblooms/"),
+        InlineKeyboardButton("📷 Visit Koreanatrizstudiosg Instagram", url="https://www.instagram.com/koreanatrizstudiosg/")
+    )
 
-    # Send coupon with Instagram button
+    # Send coupon with Instagram buttons
     bot.send_message(call.message.chat.id, f"🎉 Your coupon code is: {coupon}", reply_markup=markup)
 
 # Run the bot
