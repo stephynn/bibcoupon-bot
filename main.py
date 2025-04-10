@@ -47,7 +47,7 @@ def generate_coupon(call):
         InlineKeyboardButton("💐 Visit BunnyInBlooms Instagram", url="https://www.instagram.com/bunnyinblooms/")
     )
     markup.add(
-        InlineKeyboardButton("📷 Visit Koreanatrizstudiosg Instagram", url="https://www.instagram.com/koreanatrizstudiosg/")
+        InlineKeyboardButton("📷 Visit Koreanatrizstudiosg Instagram", url="https://www.instagram.com/artizstudio.sg/")
     )
 
     # Send coupon with Instagram buttons
